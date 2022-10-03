@@ -13,6 +13,19 @@
   color: blue;
 }
 
+.fnumbers{
+  color: blue;
+  /* padding: 2px; */
+  background-color: lightblue;
+  vertical-align: top;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.statusstring span{
+  border-radius: 5px;
+}
+
 .statusstring[title~=Risk] span{
   color: crimson;
   padding: 2px;
@@ -62,6 +75,7 @@
   max-width: 30vw !important;
   border: 1px solid #ced4da;
   border-radius: 3px;
+  z-index: 2;
 }
 .ui-datepicker.ui-widget .ui-datepicker-calendar td a.ui-state-active {
   background-color: #186ba0;
@@ -88,6 +102,7 @@
   background-color: aliceblue;
   color: blue;
   border-radius: 5px;
+  justify-content: center;
   text-align: center;
 }
 .tdinlinei {
@@ -101,6 +116,10 @@
   /* text-align: center; */
   color: #000;
 }
+#std div:nth-child(even){
+  min-width: 30%;
+  text-align: center;
+}
 #std div:nth-child(odd){
   text-align: center;
   align-content: center;
@@ -111,6 +130,7 @@
 
 .cend.inactive {
   display: none;
+  text-align: center;
 }
 
 .cend {

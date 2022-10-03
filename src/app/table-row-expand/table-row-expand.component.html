@@ -1,5 +1,7 @@
 <div style="padding-left: 10px;padding-top: 10px;">
-<div  style="display: flex;">
+    <div style="padding: 10px;">
+<h1 style="display: inline;">Projects </h1><span class="fnumbers">{{projects.length}}</span></div>
+    <div  style="display: flex;">
     <button  id="btn1" style="margin-right: 20px;" pButton type="button" (click)="op.toggle($event)" icon="pi pi-table" ></button>
     <div class="col-md-4">
         <button  id="btn1" pButton type="button" (click)="mf.toggle($event)" icon="pi pi-filter" ></button>
@@ -172,7 +174,20 @@
                 </p-cellEditor>
             </td>
             <td class="cl0" [ngClass]="columnsetings[0].type">{{project.projectName}}</td>
-            <td class="cl1">{{project.Manager}}</td>
+            <td class="cl1">
+                <!-- {{project.Manager}} -->
+
+                <div>
+                    <p-avatar
+                      
+                      image="{{project.ManagerImgs}}"
+                      shape="circle"
+                      pTooltip="{{project.Manager}}"
+                      tooltipPosition="bottom">
+                    </p-avatar>
+                  </div>
+                  
+            </td>
             <!-- <td class="cl1">{{project.projectManager}}</td> -->
             <td class="cl2" [ngClass]="columnsetings[1].type" title="{{project.status}}" (click)="status.toggle($event) ; onStatus(project)" >
                 <span>• {{project.status}}</span>
@@ -193,7 +208,7 @@
                     <span *ngIf="project.startdate.length == 0">-</span>
                      
                 </div>
-                <div class="tdinline" *ngIf="showBtn===project.id"><p-calendar [showButtonBar]="true" [touchUI]="true" [inline]="true" (onClearClick)="cl();csactive();csonch(project.id);" (onSelect)="onsch($event,project.id);csactive();" [ngClass]="msstatus ? 'cstart' : 'cstart inactive'"></p-calendar></div>
+                <p-calendar *ngIf="showBtn===project.id" [showButtonBar]="true" [touchUI]="true" [inline]="true" (onClearClick)="cl();csactive();csonch(project.id);" (onSelect)="onsch($event,project.id);csactive();" [ngClass]="msstatus ? 'cstart' : 'cstart inactive'"></p-calendar>
                 <div class="tdinlinei">
                     <i class="pi pi-angle-right"></i>
                 </div>
@@ -203,7 +218,7 @@
                     
                 </div>
                 <!-- [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030" -->
-                <div class="tdinline" *ngIf="showBtn===project.id"><p-calendar [showButtonBar]="true" (onClearClick)="cl();ceactive();ceonch(project.id);" [touchUI]="true" [inline]="true" (onSelect)="onch($event,project.id);ceactive();" [ngClass]="mestatus ? 'cend' : 'cend inactive'"></p-calendar></div>
+                <p-calendar *ngIf="showBtn===project.id" [showButtonBar]="true" (onClearClick)="cl();ceactive();ceonch(project.id);" [touchUI]="true" [inline]="true" (onSelect)="onch($event,project.id);ceactive();" [ngClass]="mestatus ? 'cend' : 'cend inactive'"></p-calendar>
 
 
             </td>
@@ -222,7 +237,7 @@
     <ng-template pTemplate="rowexpansion" let-project>
      
         <tr>
-            <td colspan="7">
+            <td colspan="3">
                 <div class="p-p-3">
                     <!-- <div class="container">
                         <ul class="timeline" *ngFor = "let i of project.traker">

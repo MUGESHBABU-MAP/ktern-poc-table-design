@@ -38,6 +38,8 @@ import { NgZorroAntdModule, NZ_I18N, en_US } from "ng-zorro-antd";
 import { CalendarModule } from 'primeng/calendar';
 import {PaginatorModule} from 'primeng/paginator';
 import _, { map } from 'underscore';
+import { AvatarModule } from "primeng/avatar";
+import {TooltipModule} from 'primeng/tooltip';
 import { ThousandPipePipe } from './thousand-pipe.pipe'
 @NgModule({
   declarations: [
@@ -72,10 +74,9 @@ import { ThousandPipePipe } from './thousand-pipe.pipe'
     ListboxModule,
     NgZorroAntdModule,
     CalendarModule,
-    PaginatorModule
- 
-
-
+    PaginatorModule,
+    AvatarModule,
+    TooltipModule
 
   ],
   providers: [FilterService, ProductService , PrimeNGConfig,MessageService , CustomerService],

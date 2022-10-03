@@ -5,13 +5,15 @@ import _, { map } from 'underscore';
 import { DatePipe } from '@angular/common'
 import {PaginatorModule} from 'primeng/paginator';
 // import { timeStamp } from 'console';
+import { AvatarModule } from "primeng/avatar";
+import {TooltipModule} from 'primeng/tooltip';
 
 
 @Component({
   selector: 'app-table-row-expand',
   templateUrl: './table-row-expand.component.html',
   styleUrls: ['./table-row-expand.component.css'],
-  providers: [DatePipe,PaginatorModule]
+  providers: [DatePipe,PaginatorModule,AvatarModule,TooltipModule]
 })
 export class TableRowExpandComponent implements OnInit {
   msstatus: boolean = false;
@@ -253,6 +255,7 @@ constructor(private productService: ProductService, public datepipe: DatePipe){
     "id": 1,
     "style": "color: red; background-color: white;",
     "class": "string",
+    "ManagerImgs":"/assets/images/user2.jpg",
     "projectName":"Kaar Tech",
     "Manager":"Jeevan",
     "status":"Risk",
@@ -282,6 +285,7 @@ constructor(private productService: ProductService, public datepipe: DatePipe){
   {
     "id":2,
     "type":"string",
+    "ManagerImgs":"/assets/images/user2.jpg",
     "projectName":"Daimler",
     "Manager":"Jeevan",
     "status":"Ontrack",
@@ -308,6 +312,7 @@ constructor(private productService: ProductService, public datepipe: DatePipe){
   {
     "id":3,
     "type":"string",
+    "ManagerImgs":"https://www.w3schools.com/images/w3schools_green.jpg",
     "projectName":"Dell",
     "Manager":"Mohan Das",
     "status":"OnHold",
@@ -333,6 +338,7 @@ constructor(private productService: ProductService, public datepipe: DatePipe){
   {
     "id":4,
     "class": "string",
+    "ManagerImgs":"https://www.w3schools.com/images/w3schools_green.jpg",
     "projectName":"Almas Tofech",
     "Manager":"Ravi",
     "status":"Potential Risk",
@@ -360,6 +366,7 @@ constructor(private productService: ProductService, public datepipe: DatePipe){
   },
   {
     "id":5,
+    "ManagerImgs":"/assets/images/user1.jfif",
     "projectName":"Al Bid Info Tech",
     "Manager":"Gopal Das",
     "status":"Risk",
@@ -388,6 +395,7 @@ constructor(private productService: ProductService, public datepipe: DatePipe){
   },
   {
     "id": 6,
+    "ManagerImgs":"/assets/images/user2.jpg",
     "projectName": "Al Rias",
     "Manager":"Jeevan",
     "status":"Risk",
