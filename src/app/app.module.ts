@@ -35,6 +35,8 @@ import { CustomerService } from './customer.service';
 import {ListboxModule} from 'primeng/listbox';
 // import { TreeSelectComponent } from './tree-select/tree-select.component'; 
 import { NgZorroAntdModule, NZ_I18N, en_US } from "ng-zorro-antd";
+import { CalendarModule } from 'primeng/calendar';
+import {PaginatorModule} from 'primeng/paginator';
 import _, { map } from 'underscore';
 import { ThousandPipePipe } from './thousand-pipe.pipe'
 @NgModule({
@@ -69,6 +71,8 @@ import { ThousandPipePipe } from './thousand-pipe.pipe'
     ToastModule,
     ListboxModule,
     NgZorroAntdModule,
+    CalendarModule,
+    PaginatorModule
  
 
 

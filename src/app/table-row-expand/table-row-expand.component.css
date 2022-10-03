@@ -1,27 +1,168 @@
 .pSelectButtonStyle {
-    border-top-left-radius: .3em;
-    border-top-right-radius: .3em;
-    border-bottom-left-radius: .3em;
-    border-bottom-right-radius: .3em;
-    border-left: solid #cccccc .07em;
-    border-right: solid #cccccc .07em;
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
+  border-left: solid #cccccc .07em;
+  border-right: solid #cccccc .07em;
 }
 
+/* mcss */
+
+.string{
+  color: blue;
+}
+
+.statusstring[title~=Risk] span{
+  color: crimson;
+  padding: 2px;
+  background-color: lightpink;
+}
+
+/* .statusstring[title~=Ontrack]{
+  color: green;
+} */
+.statusstring[title~=Ontrack] span{
+  color: green;
+  padding: 2px;
+  background-color: lightgreen;
+}
+
+.statusstring[title~=OnHold] span{
+  color: dodgerblue;
+  padding: 2px;
+  background-color: lightblue;
+}
+.statusstring{
+  padding: 10px;
+}
+
+/* .statusstring:before {
+  content:"• ";
+} */
+/* .p-datepicker-inline {
+  position: absolute;
+}
+::ng-deep .p-datepicker-touch-ui {
+  left: 50%;
+  min-width: 8vw;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.p-datepicker-calendar{
+  width: 5vh;
+  max-width: 5vh;
+} */
+::ng-deep .p-calendar .p-datepicker-touch-ui, .p-datepicker-touch-ui {
+  padding: 0.5rem;
+  /* background: #000; */
+  min-width: 20vw !important;
+  color: #495057;
+  max-width: 30vw !important;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+}
+.ui-datepicker.ui-widget .ui-datepicker-calendar td a.ui-state-active {
+  background-color: #186ba0;
+  color: #ffffff;
+}
+
+.number{
+  color: blue;
+}
+.p-datepicker-touch-ui {
+  left: 50%;
+  min-width: 10vw;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+.tdinline {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  background-color: aliceblue;
+  color: blue;
+  border-radius: 5px;
+  text-align: center;
+}
+.tdinlinei {
+  display: inline;
+  align-items: center;
+  align-content: center;
+  color: blue;
+  text-align: center;
+}
+#std{
+  /* text-align: center; */
+  color: #000;
+}
+#std div:nth-child(odd){
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  min-width: 30%;
+}
+
+.cend.inactive {
+  display: none;
+}
+
+.cend {
+  /* display: none; */
+  color: coral;
+}
+
+.cstart.inactive {
+  display: none;
+}
+
+.cstart {
+  /* display: none; */
+  color: coral;
+}
+
+.mbody{
+  background: #f5f6fa;
+  overflow: auto;
+  text-align: center;
+}
+
+.mbody.active .mwrapper .msidebar{
+  left: -225px;
+}
+
+.mbody.active .mwrapper .msection{
+  margin-left: 0;
+  width: 100%;
+}
+
+
+/* mcss */
 .flex-end {
   display: flex;
   justify-content: flex-end;
 }
-.purple{
+
+.purple {
   background-color: blue;
 }
-.white{
+
+.white {
   background-color: grey;
 }
 
-th{
+th {
   width: "3rem"
 }
-.p-checkbox ,.p-checkbox-box {
+
+.p-checkbox,
+.p-checkbox-box {
   border: 2px solid #ced4da;
   background: #fff;
   width: 14px;
@@ -32,7 +173,8 @@ th{
 }
 
 
-.p-timeline-event-content, .p-timeline-event-opposite {
+.p-timeline-event-content,
+.p-timeline-event-opposite {
   /* flex: 1; */
   padding: 0 1rem;
   display: flex !important;
@@ -40,14 +182,16 @@ th{
   position: absolute;
 }
 
-.p-timeline.p-timeline-vertical .p-timeline-event-opposite, .p-timeline.p-timeline-vertical .p-timeline-event-content {
+.p-timeline.p-timeline-vertical .p-timeline-event-opposite,
+.p-timeline.p-timeline-vertical .p-timeline-event-content {
   padding: 0 1rem;
   flex: 0;
   position: absolute;
-  display: flex! important
+  display: flex ! important
 }
 
-.p-timeline-vertical .p-timeline-event-opposite, .p-timeline.p-timeline-vertical .p-timeline-event-content {
+.p-timeline-vertical .p-timeline-event-opposite,
+.p-timeline.p-timeline-vertical .p-timeline-event-content {
   padding-top: 1px;
   padding-right: 1rem;
   padding-bottom: 0px;
@@ -55,60 +199,62 @@ th{
   position: absolute;
 }
 
-.tabCol{
+.tabCol {
   display: none;
 }
 
-.p-datatable.p-datatable-sm .p-datatable-thead > tr > th {
+.p-datatable.p-datatable-sm .p-datatable-thead>tr>th {
   padding: 0.5rem 0.5rem;
   background: #add8e6;
   color: #000;
   /* --bs-link-hover-color: #a52a2a; */
 }
-#resources{
-  
-width: 381px;
-height: 170px;
 
-/* Gray/0 */
+#resources {
 
-background: grey;
-border-radius: 8px;
+  width: 381px;
+  height: 170px;
 
-/* Inside auto layout */
+  /* Gray/0 */
 
-flex: none;
-order: 1;
-flex-grow: 0;
+  background: grey;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
-#resourcesBtn{
+#resourcesBtn {
   /* push button */
 
 
-/* Auto layout */
+  /* Auto layout */
 
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 2px 8px;
-gap: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px;
+  gap: 8px;
 
-position: absolute;
-width: 71px;
-height: 22px;
-left: 127px;
-top: 44px;
+  position: absolute;
+  width: 71px;
+  height: 22px;
+  left: 127px;
+  top: 44px;
 
-/* White */
+  /* White */
 
-/* background: #FFFFFF; */
-/* sd-button/default */
+  /* background: #FFFFFF; */
+  /* sd-button/default */
 
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
-border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16);
+  border-radius: 4px;
 }
+
 .box {
   display: flex;
   /* background-color: yellow; */
